@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadxxtw3965-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadxxtw3965-tenant-component
+    app.kubernetes.io/part-of: loadxxtw3965-tenant-app
+  name: loadxxtw3965-tenant-component
+  namespace: loadxxtw3965-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadxxtw3965-tenant-component
+    weight: null
+status: {}
